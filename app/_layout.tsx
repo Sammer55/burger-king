@@ -1,22 +1,25 @@
 import { useEffect } from "react";
-import { useFonts } from "expo-font";
 import { ThemeProvider } from "../src/styles/themeProvider";
 import handleLoadDefaultConfig from "../src/utils/handleLoadDefaultConfig";
 import { Stack } from "expo-router";
+import { StatusBar } from "react-native";
+import { useFonts } from "expo-font";
 
 export default function Layout() {
-  const [fontsLoaded] = useFonts({
+  let [fontsLoaded] = useFonts({
     FlameSans: require("../assets/fonts/FlameSans.otf"),
+    FlameBold: require("../assets/fonts/FlameBold.otf"),
   });
 
   useEffect(() => {
     handleLoadDefaultConfig();
   }, []);
 
-  if (!fontsLoaded) return null;
+  if (!fontsLoaded) return;
 
   return (
     <ThemeProvider>
+      <StatusBar barStyle="light-content" />
       <Stack
         initialRouteName="coupons"
         screenOptions={{

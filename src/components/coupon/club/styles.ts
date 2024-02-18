@@ -26,12 +26,14 @@ export const Crown = styled(Image)`
   height: 13px;
 `;
 
-export const WinPoints = styled.Text`
-  color: ${({ theme }) => theme.colors.burger};
+export const WinPoints = styled.Text<{ bold?: boolean }>`
+  color: ${({ theme, bold }) =>
+    bold ? theme.colors.burger : `${theme.colors.burger}90`};
   font-size: 10px;
   line-height: 10px;
   max-width: 32px;
   text-align: left;
+  font-family: "FlameSans";
 `;
 
 export const SkipTheLine = styled.Text`
@@ -41,4 +43,5 @@ export const SkipTheLine = styled.Text`
   line-height: 11px;
   text-transform: uppercase;
   text-align: center;
+  font-family: "FlameSans";
 `;

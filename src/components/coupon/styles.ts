@@ -5,7 +5,7 @@ export const Wrapper = styled.TouchableOpacity`
   background-color: white;
   border-radius: 16px;
   flex: 0.5;
-  margin: 4px;
+  margin: 8px;
 `;
 
 export const Content = styled.View`
@@ -15,9 +15,11 @@ export const Content = styled.View`
   flex: 1;
 `;
 
-export const Picture = styled(Image)`
+export const Picture = styled(Image).attrs(() => ({
+  contentFit: "contain",
+}))`
   width: 100%;
-  height: 120px;
+  height: 140px;
 `;
 
 export const ProductDescription = styled.View`
@@ -26,10 +28,12 @@ export const ProductDescription = styled.View`
 
 export const ProductName = styled.Text`
   color: ${({ theme }) => theme.colors.burger};
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   max-width: 80%;
-  line-height: 13px;
+  line-height: 12px;
+  font-family: "FlameBold";
+  letter-spacing: 0.4px;
 `;
 
 export const ProductAditional = styled.Text`
@@ -38,6 +42,7 @@ export const ProductAditional = styled.Text`
   text-align: center;
   max-width: 80%;
   line-height: 10px;
+  font-family: "FlameSans";
 `;
 
 export const WrapperPrice = styled.View`
@@ -47,6 +52,8 @@ export const WrapperPrice = styled.View`
 `;
 
 export const Price = styled.Text`
-  color: ${({ theme }) => theme.colors.ketchup};
-  font-size: 18px;
+  color: ${({ theme }) => theme.colors.bread};
+  font-size: 16px;
+  letter-spacing: 0.6px;
+  font-family: "FlameBold";
 `;

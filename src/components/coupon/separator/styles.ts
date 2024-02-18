@@ -12,9 +12,10 @@ export const Line = styled.View`
 `;
 
 export const Circle = styled.View`
-  width: 24px;
-  height: 24px;
-  border-radius: 24px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
   position: absolute;
   background-color: ${({ theme }) => theme.colors.background};
+  z-index: 2;
 `;
