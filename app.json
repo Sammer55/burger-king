@@ -2,6 +2,7 @@
   "expo": {
     "name": "burger-king",
     "slug": "burger-king",
+    "scheme": "burger-king-scheme",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -30,7 +31,8 @@
         {
           "fonts": ["./assets/fonts/FlameSans.otf"]
         }
-      ]
+      ],
+      "expo-router"
     ]
   }
 }
